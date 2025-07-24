@@ -4,6 +4,11 @@ import com.vtaveira.domain.model.User;
 import com.vtaveira.infra.persistence.entity.UserEntity;
 
 public class UserMapper {
+
+  private UserMapper() {
+    throw new IllegalStateException("Utility class");
+  }
+
   public static UserEntity toEntity(User user) {
     var entity = new UserEntity();
     entity.setUsername(user.getUsername());
