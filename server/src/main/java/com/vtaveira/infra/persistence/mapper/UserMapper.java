@@ -5,8 +5,7 @@ import com.vtaveira.infra.persistence.entity.UserEntity;
 
 public class UserMapper {
   public static UserEntity toEntity(User user) {
-    UserEntity entity = new UserEntity();
-    entity.setId(user.getId());
+    var entity = new UserEntity();
     entity.setUsername(user.getUsername());
     entity.setFullName(user.getFullName());
     entity.setEmail(user.getEmail());
@@ -16,8 +15,7 @@ public class UserMapper {
   }
 
   public static User toDomain(UserEntity entity) {
-    User user = new User();
-    user.setId(entity.getId());
+    var user = new User();
     user.setUsername(entity.getUsername());
     user.setFullName(entity.getFullName());
     user.setEmail(entity.getEmail());

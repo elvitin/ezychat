@@ -5,15 +5,17 @@ import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 import com.vtaveira.domain.model.UserStatus;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @DatabaseTable(tableName = "users")
 public class UserEntity {
-  @DatabaseField(generatedId = true)
-  private long id;
 
-  @DatabaseField(canBeNull = false, unique = true)
+  @DatabaseField(id = true)
   private String username;
 
   @DatabaseField(canBeNull = false)
@@ -26,19 +28,8 @@ public class UserEntity {
   private String password;
 
   @DatabaseField(canBeNull = false)
-  private UserStatus status;
+  private UserStatus status = UserStatus.OFFLINE;
 
   @ForeignCollectionField(eager = true)
   private ForeignCollection<UserGroupEntity> userGroups;
-
-  public UserEntity() {
-  }
-
-  public UserEntity(String username, String fullName, String email, String password) {
-    this.username = username;
-    this.fullName = fullName;
-    this.email = email;
-    this.password = password;
-    this.status = UserStatus.OFFLINE; // Default status
-  }
 }
