@@ -1,15 +1,13 @@
 module com.vtaveira.ui {
+  requires com.vtaveira.common;
   requires javafx.controls;
   requires javafx.fxml;
   requires javafx.web;
-
-  requires org.controlsfx.controls;
-  requires com.dlsc.formsfx;
-  requires net.synedra.validatorfx;
-  requires org.kordamp.ikonli.javafx;
-  requires org.kordamp.bootstrapfx.core;
-  requires eu.hansolo.tilesfx;
+  requires java.logging;
+  requires org.slf4j;
+  requires static lombok;
 
   opens com.vtaveira.ui to javafx.fxml;
+  opens com.vtaveira.ui.controller to javafx.fxml;
   exports com.vtaveira.ui;
 }
