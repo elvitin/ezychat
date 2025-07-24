@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/24.0.1"
+      fx:controller="com.vtaveira.ui.controller.RegisterController"
+      alignment="CENTER"
+      spacing="15.">
+
+  <padding>
+    <Insets bottom="30." left="30." right="30." top="30."/>
+  </padding>
+
+  <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Registro de Usuário"/>
+
+  <VBox alignment="CENTER" spacing="10.">
+    <VBox spacing="5.">
+      <Label text="* Usuário:"/>
+      <TextField fx:id="usernameField" promptText="Digite um nome de usuário" text="elvitin"/>
+    </VBox>
+    <VBox spacing="5.">
+      <Label text="* Nome Completo:"/>
+      <TextField fx:id="fullNameField" promptText="Digite seu nome completo" text="Victor Taveira Rodrigues"/>
+    </VBox>
+    <VBox spacing="5.">
+      <Label text="* Email:"/>
+      <TextField fx:id="emailField" promptText="Digite seu email" text="victor@mail.com"/>
+    </VBox>
+    <VBox spacing="5.">
+      <Label text="* Senha:"/>
+      <PasswordField fx:id="passwordField" promptText="Digite sua senha" text="123123"/>
+    </VBox>
+    <VBox spacing="5.">
+      <Label text="* Confirmar Senha:"/>
+      <PasswordField fx:id="confirmPasswordField" promptText="Confirme sua senha" text="123123"/>
+    </VBox>
+  </VBox>
+
+  <VBox alignment="CENTER"
+        maxWidth="Infinity"
+        spacing="10.0"
+        style="-fx-font-weight: 800"
+  >
+    <Button fx:id="registerButton"
+            maxWidth="Infinity"
+            onAction="#handleRegister"
+            alignment="CENTER"
+            contentDisplay="CENTER"
+            style="-fx-background-color: #4CAF50; -fx-text-fill: white"
+            text="Registrar"
+    />
+
+    <Button fx:id="backButton"
+            alignment="CENTER"
+            contentDisplay="CENTER"
+            maxWidth="Infinity"
+            onAction="#handleBack"
+            style="-fx-background-color: #757575; -fx-text-fill: white;"
+            text="Voltar"
+    />
+
+  </VBox>
+</VBox>

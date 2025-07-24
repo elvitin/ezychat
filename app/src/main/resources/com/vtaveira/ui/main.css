@@ -1,0 +1,10 @@
+
+.main_title {
+  -fx-font-size: 26px;
+  -fx-font-weight: bold;
+}
+
+.primary_button {
+  -fx-background-color: #4CAF50;
+  -fx-text-fill: white;
+}
