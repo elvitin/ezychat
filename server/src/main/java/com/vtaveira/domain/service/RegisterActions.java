@@ -21,8 +21,8 @@ public class RegisterActions {
     return this;
   }
 
-   public RegisterActions onUsernameAlreadyInUse(Runnable action) {
+  public RegisterActions onUsernameAlreadyInUse(Runnable action) {
     this.onUsernameAlreadyInUse = action;
     return this;
-   }
+  }
 }
