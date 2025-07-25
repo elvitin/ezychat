@@ -3,29 +3,67 @@
 #             https://www.jetbrains.com/help/qodana/qodana-yaml.html            #
 #-------------------------------------------------------------------------------#
 version: "1.0"
-
 #Specify inspection profile for code analysis
 profile:
   name: qodana.starter
-
 #Enable inspections
 #include:
 #  - name: <SomeEnabledInspectionId>
-
 #Disable inspections
 #exclude:
 #  - name: <SomeDisabledInspectionId>
 #    paths:
 #      - <path/where/not/run/inspection>
-
 projectJDK: "24" #(Applied in CI/CD pipeline)
-
 #Execute shell command before Qodana execution (Applied in CI/CD pipeline)
 #bootstrap: sh ./prepare-qodana.sh
-
 #Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)
 #plugins:
 #  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
-
 #Specify Qodana linter for analysis (Applied in CI/CD pipeline)
 linter: jetbrains/qodana-jvm:2025.1
+include:
+  - name: JavaFxColorRgb
+  - name: MavenDuplicateDependenciesInspection
+  - name: MavenDuplicatePluginInspection
+  - name: MavenRedundantGroupId
+  - name: MavenPropertyInParent
+  - name: MavenParentMissedGroupIdArtifactIdInspection
+  - name: MavenModelInspection
+  - name: MavenParentMissedVersionInspection
+  - name: CyclicJobDependency
+  - name: MandatoryParamsAbsent
+  - name: GithubFunctionSignatureValidation
+  - name: UndefinedParamsPresent
+  - name: IllegalJobDependency
+  - name: IllegalJobDependency
+  - name: UndefinedAction
+  - name: DeprecatedClassUsageInspection
+  - name: XmlDeprecatedElement
+  - name: XmlDuplicatedId
+  - name: CheckTagEmptyBody
+  - name: CheckXmlFileWithXercesValidator
+  - name: XmlDefaultAttributeValue
+  - name: XmlHighlighting
+  - name: XmlWrongRootElement
+  - name: XmlUnusedNamespaceDeclaration
+  - name: XmlUnresolvedReference
+  - name: XmlPathReference
+  - name: CheckDtdRefs
+  - name: XmlInvalidId
+  - name: XmlUnboundNsPrefix
+  - name: IgnoreFileDuplicateEntry
+  - name: VulnerableLibrariesGlobal
+  - name: JavaFxEventHandler
+  - name: JavaFxRedundantPropertyValue
+  - name: JavaFxUnusedImports
+  - name: JavaFxResourcePropertyValue
+  - name: JavaFxDefaultTag
+  - name: JavaFxUnresolvedFxIdReference
+  - name: JavaFxUnresolvedStyleClassReference
+  - name: PbDuplicatedImports
+  - name: JvmLinesOfCodeInspection
+  - name: RedundantModifiersUtilityClassLombok
+  - name: ClassWithMultipleLoggers
+exclude:
+  - name: MetaAnnotationWithoutRuntimeRetention
