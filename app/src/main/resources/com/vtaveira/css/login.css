@@ -1,0 +1,20 @@
+.main-title {
+  -fx-font-size: 26px;
+  -fx-font-weight: bold;
+}
+
+.options-container {
+  -fx-spacing: 10.0;
+  -fx-font-weight: 800;
+}
+
+.primary-button {
+  -fx-background-color: #4CAF50;
+  -fx-text-fill: #fff;
+}
+
+.secondary-button {
+  -fx-background-color: #2196F3;
+  -fx-text-fill: #fff;
+}
+

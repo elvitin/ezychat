@@ -1,0 +1,54 @@
+
+.chat-history {
+  -fx-background-color: fff;
+  -fx-border-color: E5E5E5;
+  -fx-border-width: 0 1px 0 0;
+  -fx-border-style: solid;
+}
+
+.friend-profile-header {
+  -fx-background-color: fff;
+  -fx-border-width: 0 0 1px 0;
+  -fx-border-color: E5E5E5;
+}
+
+/* esse é para o splitter */
+.split-pane *.split-pane-divider {
+  -fx-padding: 0 1 0 1;
+}
+
+.text-field {
+  -fx-background-radius: 300px 0 0 300px;
+  -fx-background-color: #fff;
+  -fx-padding: 18 18;
+  -fx-text-fill: #000;
+  -fx-border-color: transparent; /* Adicionado para consistência */
+}
+
+/* Estilos para o botão de envio */
+.send-button {
+  -fx-background-insets: 0;
+  -fx-background-radius: 100%;
+  -fx-background-color: #1DAA61;
+  -fx-min-width: 38px;
+  -fx-min-height: 38px;
+  -fx-pref-width: 38px;
+  -fx-pref-height: 38px;
+}
+
+.input-field-container {
+  -fx-background-color: #fff;
+  -fx-background-radius: 999px;
+  -fx-padding: 0 10px 0 0;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 0);
+}
+
+.send-button:hover {
+  -fx-background-insets: 0;
+  -fx-background-color: #4ABB81;
+}
+
+/* Estilo para o ícone SVG dentro do botão */
+.send-button .send-icon {
+  -fx-fill: #fff;
+}
