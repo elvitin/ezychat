@@ -1,4 +1,4 @@
-package com.vtaveira.ui;
+package com.vtaveira;
 
 import com.vtaveira.infra.config.AppConfig;
 import com.vtaveira.infra.database.DatabaseConfig;
@@ -19,15 +19,13 @@ public class EzyChatApp extends Application {
 
   @Override
   public void start(Stage primaryStage) throws IOException {
-
     AppConfig.initialize();
     DatabaseConfig.initialize();
-
-    var loginScene = FXMLLoaderUtil.loadScene("login.fxml");
+    var loginScene = FXMLLoaderUtil.loadScene("main-chat.fxml");
     primaryStage.setTitle("EzyChat App");
     primaryStage.setScene(loginScene);
-    primaryStage.setMinWidth(500);
-    primaryStage.setMinHeight(400);
+    primaryStage.setMinWidth(800);
+    primaryStage.setMinHeight(600);
     primaryStage.show();
     log.info("EzyChat Client Application started");
   }

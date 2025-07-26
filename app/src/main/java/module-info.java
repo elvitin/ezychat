@@ -7,7 +7,6 @@ module com.vtaveira.ui {
   requires org.slf4j;
   requires static lombok;
 
-  opens com.vtaveira.ui to javafx.fxml;
   opens com.vtaveira.ui.controller to javafx.fxml;
-  exports com.vtaveira.ui;
+  exports com.vtaveira;
 }

@@ -1,6 +1,6 @@
 package com.vtaveira.ui.util;
 
-import com.vtaveira.ui.EzyChatApp;
+import com.vtaveira.EzyChatApp;
 import com.vtaveira.ui.controller.CleanableController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,8 +12,8 @@ import java.io.IOException;
 
 @UtilityClass
 public class FXMLLoaderUtil {
-  public Scene loadScene(String fxmlPath) throws IOException {
-    var loader = new FXMLLoader(EzyChatApp.class.getResource(fxmlPath));
+  public Scene loadScene(String fxmlName) throws IOException {
+    var loader = new FXMLLoader(EzyChatApp.class.getResource("fxml/" + fxmlName));
     Parent root = loader.load();
     var scene = new Scene(root);
     Object controller = loader.getController();
