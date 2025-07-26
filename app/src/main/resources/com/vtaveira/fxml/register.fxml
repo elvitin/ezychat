@@ -8,7 +8,9 @@
       xmlns="http://javafx.com/javafx/24.0.1"
       fx:controller="com.vtaveira.ui.controller.RegisterController"
       alignment="CENTER"
-      spacing="15.">
+      spacing="15."
+
+>
 
   <padding>
     <Insets bottom="30." left="30." right="30." top="30."/>
