@@ -19,14 +19,22 @@ public class EzyChatApp extends Application {
 
   @Override
   public void start(Stage primaryStage) throws IOException {
+
     AppConfig.initialize();
     DatabaseConfig.initialize();
-    var loginScene = FXMLLoaderUtil.loadScene("main-chat.fxml");
+
+    var loginScene = FXMLLoaderUtil.loadScene("login.fxml");
+
     primaryStage.setTitle("EzyChat App");
+
+    primaryStage.setHeight(AppConfig.initialHeight());
+    primaryStage.setWidth(AppConfig.initialWidth());
+    primaryStage.setMinWidth(AppConfig.initialWidth());
+    primaryStage.setMinHeight(AppConfig.initialHeight());
+
     primaryStage.setScene(loginScene);
-    primaryStage.setMinWidth(800);
-    primaryStage.setMinHeight(600);
     primaryStage.show();
+
     log.info("EzyChat Client Application started");
   }
 

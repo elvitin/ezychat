@@ -1,0 +1,18 @@
+.main-title {
+  -fx-font-size: 20px;
+  -fx-font-weight: bold;
+}
+
+.options-container {
+  -fx-font-weight: 800;
+}
+
+.register-button {
+  -fx-background-color: #4CAF50;
+  -fx-text-fill: white;
+}
+
+.back-button {
+  -fx-background-color: #757575;
+  -fx-text-fill: white;
+}

@@ -4,12 +4,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <VBox xmlns:fx="http://javafx.com/fxml/1"
-      alignment="CENTER"
       spacing="20.0"
       stylesheets="@../css/login.css"
       xmlns="http://javafx.com/javafx/24.0.1"
-      fx:controller="com.vtaveira.ui.controller.LoginController"
->
+      alignment="CENTER"
+      fx:controller="com.vtaveira.ui.controller.LoginController">
 
   <padding>
     <Insets bottom="40.0"
@@ -19,10 +18,12 @@
   </padding>
 
   <Label styleClass="main-title"
-         text="EzyChat"/>
+         text="EzyChat"
+         VBox.vgrow="ALWAYS"/>
 
   <VBox alignment="CENTER"
-        spacing="10.">
+        spacing="10."
+        VBox.vgrow="ALWAYS">
     <VBox spacing="5.">
       <Label text="* Usuário:"/>
       <TextField fx:id="usernameField"
@@ -40,23 +41,21 @@
 
   <VBox alignment="CENTER"
         styleClass="options-container"
-  >
+        VBox.vgrow="ALWAYS">
     <Button fx:id="loginButton"
             alignment="CENTER"
             contentDisplay="CENTER"
             maxWidth="Infinity"
             onAction="#handleLogin"
             styleClass="primary-button"
-            text="Entrar"
-    />
+            text="Entrar"/>
     <Button fx:id="registerButton"
             alignment="CENTER"
             contentDisplay="CENTER"
             maxWidth="Infinity"
             onAction="#handleRegister"
             styleClass="secondary-button"
-            text="Registrar"
-    />
+            text="Registrar"/>
   </VBox>
 
 </VBox>
