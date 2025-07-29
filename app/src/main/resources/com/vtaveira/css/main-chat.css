@@ -1,20 +1,109 @@
-
-.chat-history {
-  -fx-background-color: fff;
-  -fx-border-color: E5E5E5;
+.scroll-pane {
+  -fx-background-color: #fff;
+  -fx-border-color: #E5E5E5;
   -fx-border-width: 0 1px 0 0;
-  -fx-border-style: solid;
+  -fx-min-width: 565px;
+  -fx-pannable: "true";
+  -fx-vbar-policy: "ALWAYS";
+  -fx-hbar-policy: "NEVER";
+  -fx-fit-to-width: true;
+  -fx-background-insets: 0;
+}
+
+.scroll-pane > .viewport {
+  -fx-background-color: #fff;
+}
+
+.scroll-pane .profile-container {
+  -fx-background-color: #fff;
+  -fx-padding: 10;
+  -fx-spacing: 4;
+}
+
+.scroll-pane .profile-card {
+  -fx-background-color: #fff;
+  -fx-background-radius: 16;
+  -fx-border-color: transparent;
+  -fx-border-width: 0;
+  -fx-padding: 14;
+  -fx-alignment: center_left;
+  -fx-spacing: 14;
+}
+
+.scroll-pane .profile-card:hover {
+  -fx-background-color: #F6F5F4;
+}
+
+.scroll-pane .profile-card .profile-picture {
+  -fx-fill: "DODGERBLUE";
+  -fx-stroke-width: 0;
+}
+
+.scroll-pane .profile-card .profile-content {
+  -fx-alignment: center-left;
+}
+
+.scroll-pane .profile-card .profile-content .profile-username {
+  -fx-fill: #0a0a0a;
+  -fx-font-smoothing-type: lcd;
+  -fx-stroke-width: 0;
+  -fx-text-alignment: left;
+  -fx-font-family: "Segoe UI";
+  -fx-font-size: 16;
+}
+
+.scroll-pane .profile-card .profile-content .spoiler-content {
+  -fx-fill: #00000099;
+  -fx-font-smoothing-type: lcd;
+  -fx-stroke-width: 0;
+  -fx-text-alignment: left;
+  -fx-font-family: "Segoe UI";
+  -fx-font-size: 13;
+}
+
+.scroll-pane > .scroll-bar:vertical { /* `track` is a background of `thumb` */
+  -fx-background-color: #fff;
+}
+
+.scroll-pane > .scroll-bar:vertical > .thumb { /* `thumb` is a bar that moves up and down */
+  -fx-effect: none;
+  -fx-background-color: #CCCCCC;
+  -fx-background-insets: 3.0, 0.0, 0.0;
+  -fx-background-radius: 999px;
+}
+
+.scroll-pane > .scroll-bar:vertical > .thumb:hover {
+  -fx-background-color: #5A5A5A;
+}
+
+.scroll-pane > .scroll-bar:vertical > .increment-button, /* `button` background */
+.scroll-pane > .scroll-bar:vertical > .decrement-button {
+  -fx-background-color: transparent;
+}
+
+.scroll-pane > .scroll-bar > .decrement-button > .decrement-arrow { /* `decrement-arrow` is the icon inside the button background */
+  -fx-effect: none;
+  -fx-background-color: #CCCCCC;
+  -fx-shape: "M 0 8 Q 4 4 8 8 L 4 0 Z";
+  -fx-padding: .3em;
+}
+
+.scroll-pane > .scroll-bar > .increment-button > .increment-arrow { /* `increment-arrow` is the icon inside the button background */
+  -fx-effect: none;
+  -fx-background-color: #CCCCCC;
+  -fx-shape: "M 0 0 Q 4 4 8 0 L 4 8 Z";
+  -fx-padding: .3em;
+}
+
+.scroll-pane > .scroll-bar > .decrement-button > .decrement-arrow:hover,
+.scroll-pane > .scroll-bar > .increment-button > .increment-arrow:hover {
+  -fx-background-color: #5A5A5A;
 }
 
 .friend-profile-header {
   -fx-background-color: fff;
   -fx-border-width: 0 0 1px 0;
-  -fx-border-color: E5E5E5;
-}
-
-/* esse é para o splitter */
-.split-pane *.split-pane-divider {
-  -fx-padding: 0 1 0 1;
+  -fx-border-color: #E5E5E5;
 }
 
 .text-field {
@@ -22,7 +111,7 @@
   -fx-background-color: #fff;
   -fx-padding: 18 18;
   -fx-text-fill: #000;
-  -fx-border-color: transparent; /* Adicionado para consistência */
+  -fx-border-color: transparent;
 }
 
 /* Estilos para o botão de envio */
@@ -48,7 +137,6 @@
   -fx-background-color: #4ABB81;
 }
 
-/* Estilo para o ícone SVG dentro do botão */
 .send-button .send-icon {
   -fx-fill: #fff;
 }
