@@ -1,0 +1,37 @@
+.chat_message__left_container {
+  -fx-alignment: center_left;
+}
+
+.chat_message__right_container {
+  -fx-alignment: center_right;
+  -fx-padding: 0 0 0 16;
+}
+
+.chat_message__message_card {
+  -fx-background-radius: 12;
+  -fx-padding: 8px 10px;
+  -fx-max-width: 754px;
+  -fx-wrap-text: true;
+  /*-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 10, 0, 0)*/
+  /* add only bottom border */
+  -fx-border-width: 0 0 1px 0;
+  -fx-border-color: rgba(0, 0, 0, 0.2);
+  -fx-border-radius: 0 0 10 10;
+}
+
+.chat_message__received_message {
+  -fx-background-radius: 0 12 12;
+  -fx-background-color: #fff;
+}
+
+.chat_message__sent_message {
+  -fx-background-radius: 12 0 12 12;
+  -fx-background-color: #D9FDD3;
+}
+
+.chat_message__content {
+  -fx-font-family: "Segoe UI";
+  -fx-font-size: 14px;
+  -fx-fill: #0a0a0a;
+  -fx-font-smoothing-type: lcd;
+}

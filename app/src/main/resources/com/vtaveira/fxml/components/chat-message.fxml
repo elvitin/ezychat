@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         xmlns="http://javafx.com/javafx"
+         type="HBox"
+         stylesheets="@chat-message.css"
+         styleClass="chat_message__right_container"
+>
+  <TextFlow fx:id="messageCard"
+            styleClass="chat_message__message_card, chat_message__sent_message">
+    <Text fx:id="content"
+          styleClass="chat_message__content"
+          text="&lt;N/A&gt;"/>
+  </TextFlow>
+</fx:root>
