@@ -1,0 +1,40 @@
+.opened_chat__profile_card {
+  -fx-background-color: #fff;
+  -fx-background-radius: 16;
+  -fx-border-color: transparent;
+  -fx-border-width: 0;
+  -fx-padding: 14;
+  -fx-alignment: center_left;
+  -fx-spacing: 14;
+}
+
+.opened_chat__profile_card:hover {
+  -fx-background-color: #F6F5F4;
+}
+
+.opened_chat__profile_picture {
+  -fx-fill: "DODGERBLUE";
+  -fx-stroke-width: 0;
+}
+
+.opened_chat__profile_content {
+  -fx-alignment: center-left;
+}
+
+.opened_chat__profile_username {
+  -fx-fill: #0a0a0a;
+  -fx-font-smoothing-type: lcd;
+  -fx-stroke-width: 0;
+  -fx-text-alignment: left;
+  -fx-font-family: "Segoe UI";
+  -fx-font-size: 16;
+}
+
+.opened_chat__spoiler_content {
+  -fx-fill: #00000099;
+  -fx-font-smoothing-type: lcd;
+  -fx-stroke-width: 0;
+  -fx-text-alignment: left;
+  -fx-font-family: "Segoe UI";
+  -fx-font-size: 13;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+<fx:root xmlns:fx="http://javafx.com/fxml"
+         xmlns="http://javafx.com/javafx"
+         type="HBox"
+         stylesheets="@opened-chat.css"
+         styleClass="opened_chat__profile_card"
+         HBox.hgrow="ALWAYS"
+>
+  <Circle styleClass="opened_chat__profile_picture"
+          radius="24.0"
+  />
+  <VBox styleClass="opened_chat__profile_content">
+    <Text fx:id="username"
+          styleClass="opened_chat__profile_username"
+          text="&lt;N/A&gt;"
+    />
+    <Text fx:id="spoilerContent"
+          styleClass="opened_chat__spoiler_content"
+          text="&lt;N/A&gt;"
+    />
+  </VBox>
+</fx:root>
