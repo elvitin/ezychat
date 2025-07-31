@@ -7,225 +7,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
-<HBox xmlns:fx="http://javafx.com/fxml/1"
+<?import com.vtaveira.ui.components.OpenedChat?>
+<?import com.vtaveira.ui.components.ChatMessage?>
+
+
+<HBox xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx"
       stylesheets="@../css/main-chat.css"
-      xmlns="http://javafx.com/javafx/24.0.1"
       fx:controller="com.vtaveira.ui.controller.MainChatController"
       prefHeight="650.0"
       prefWidth="800.0"
 >
   <ScrollPane>
-    <VBox styleClass="profile-container">
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
-      <HBox styleClass="profile-card"
-            HBox.hgrow="ALWAYS">
-        <Circle styleClass="profile-picture"
-                radius="24.0"
-        />
-        <VBox styleClass="profile-content">
-          <Text styleClass="profile-username"
-                text="Veio Zebra"
-          />
-          <Text styleClass="spoiler-content"
-                text="E Deus abençoe veio Zebra"
-          />
-        </VBox>
-      </HBox>
+    <VBox fx:id="chatHistory"
+          styleClass="profile-container">
+      <OpenedChat username="Victor Rodrigues"
+                  spoilerContent="Victor é um excelente programador"/>
+      <OpenedChat username="Emily Taveira"
+                  spoilerContent="Emilly é foda no que faz"/>
     </VBox>
   </ScrollPane>
   <VBox fx:id="chatContainer"
@@ -274,87 +73,15 @@
     <ScrollPane VBox.vgrow="ALWAYS">
       <VBox fx:id="messagesContainer">
 
-        <!-- Mensagem recebida - curta -->
-        <HBox styleClass="message-card-left-container">
-          <TextFlow styleClass="message-card, received-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra."/>
-          </TextFlow>
-        </HBox>
+        <ChatMessage isFromMe="false"
+                     content="Vem almoçar filhão"/>
+        <ChatMessage isFromMe="true"
+                     content="Já vou mãe"/>
+        <ChatMessage isFromMe="false"
+                     content="Não demora hein"/>
+        <ChatMessage isFromMe="true"
+                     content="rsrrs"/>
 
-        <!-- Mensagem enviada - curta -->
-        <HBox styleClass="message-card-right-container">
-          <TextFlow styleClass="message-card, sent-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra. adipiscing elit. Fusce pharetra tempus nunc ut pharetra."/>
-          </TextFlow>
-        </HBox>
-
-        <!-- Mensagem recebida - longa -->
-        <HBox styleClass="message-card-left-container">
-          <TextFlow styleClass="message-card, received-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra. Sed ornare, ante sit amet congue feugiat, ante lorem efficitur tellus, ornare posuere augue justo et turpis. Quisque accumsan pellentesque dictum. Aliquam et lectus tempor, vulputate nisl vel, tempus lectus. Fusce sed lacus porttitor diam sollicitudin vehicula et vitae est. Donec euismod metus elit, vel elementum orci gravida sed. Aliquam eu arcu velit. Duis urna massa, dignissim dictum ultrices vel, molestie id lectus. Donec condimentum sit amet erat a ultricies. In scelerisque neque in congue laoreet. Nulla ut ultricies leo, vel mollis orci. Nam mollis erat at porttitor varius. Sed eget ligula vulputate odio dapibus faucibus sed et nisi. Nunc vel pulvinar massa, id hendrerit arcu. Aliquam eu cursus arcu"/>
-          </TextFlow>
-        </HBox>
-
-        <!-- Mensagem enviada - longa -->
-        <HBox styleClass="message-card-right-container">
-          <TextFlow styleClass="message-card, sent-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra. Sed ornare, ante sit amet congue feugiat, ante lorem efficitur tellus, ornare posuere augue justo et turpis. Quisque accumsan pellentesque dictum. Aliquam et lectus tempor, vulputate nisl vel, tempus lectus. Fusce sed lacus porttitor diam sollicitudin vehicula et vitae est. Donec euismod metus elit, vel elementum orci gravida sed. Aliquam eu arcu velit. Duis urna massa, dignissim dictum ultrices vel, molestie id lectus. Donec condimentum sit amet erat a ultricies. In scelerisque neque in congue laoreet. Nulla ut ultricies leo, vel mollis orci. Nam mollis erat at porttitor varius. Sed eget ligula vulputate odio dapibus faucibus sed et nisi. Nunc vel pulvinar massa, id hendrerit arcu. Aliquam eu cursus arcu"/>
-          </TextFlow>
-        </HBox>
-        <!-- Mensagem recebida - curta -->
-        <HBox styleClass="message-card-left-container">
-          <TextFlow styleClass="message-card, received-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra."/>
-          </TextFlow>
-        </HBox>
-
-        <!-- Mensagem enviada - curta -->
-        <HBox styleClass="message-card-right-container">
-          <TextFlow styleClass="message-card, sent-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra. adipiscing elit. Fusce pharetra tempus nunc ut pharetra."/>
-          </TextFlow>
-        </HBox>
-
-        <!-- Mensagem recebida - longa -->
-        <HBox styleClass="message-card-left-container">
-          <TextFlow styleClass="message-card, received-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra. Sed ornare, ante sit amet congue feugiat, ante lorem efficitur tellus, ornare posuere augue justo et turpis. Quisque accumsan pellentesque dictum. Aliquam et lectus tempor, vulputate nisl vel, tempus lectus. Fusce sed lacus porttitor diam sollicitudin vehicula et vitae est. Donec euismod metus elit, vel elementum orci gravida sed. Aliquam eu arcu velit. Duis urna massa, dignissim dictum ultrices vel, molestie id lectus. Donec condimentum sit amet erat a ultricies. In scelerisque neque in congue laoreet. Nulla ut ultricies leo, vel mollis orci. Nam mollis erat at porttitor varius. Sed eget ligula vulputate odio dapibus faucibus sed et nisi. Nunc vel pulvinar massa, id hendrerit arcu. Aliquam eu cursus arcu"/>
-          </TextFlow>
-        </HBox>
-
-        <!-- Mensagem enviada - longa -->
-        <HBox styleClass="message-card-right-container">
-          <TextFlow styleClass="message-card, sent-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra. Sed ornare, ante sit amet congue feugiat, ante lorem efficitur tellus, ornare posuere augue justo et turpis. Quisque accumsan pellentesque dictum. Aliquam et lectus tempor, vulputate nisl vel, tempus lectus. Fusce sed lacus porttitor diam sollicitudin vehicula et vitae est. Donec euismod metus elit, vel elementum orci gravida sed. Aliquam eu arcu velit. Duis urna massa, dignissim dictum ultrices vel, molestie id lectus. Donec condimentum sit amet erat a ultricies. In scelerisque neque in congue laoreet. Nulla ut ultricies leo, vel mollis orci. Nam mollis erat at porttitor varius. Sed eget ligula vulputate odio dapibus faucibus sed et nisi. Nunc vel pulvinar massa, id hendrerit arcu. Aliquam eu cursus arcu"/>
-          </TextFlow>
-        </HBox>
-        <!-- Mensagem recebida - curta -->
-        <HBox styleClass="message-card-left-container">
-          <TextFlow styleClass="message-card, received-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra."/>
-          </TextFlow>
-        </HBox>
-
-        <!-- Mensagem enviada - curta -->
-        <HBox styleClass="message-card-right-container">
-          <TextFlow styleClass="message-card, sent-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra. adipiscing elit. Fusce pharetra tempus nunc ut pharetra."/>
-          </TextFlow>
-        </HBox>
-
-        <!-- Mensagem recebida - longa -->
-        <HBox styleClass="message-card-left-container">
-          <TextFlow styleClass="message-card, received-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra. Sed ornare, ante sit amet congue feugiat, ante lorem efficitur tellus, ornare posuere augue justo et turpis. Quisque accumsan pellentesque dictum. Aliquam et lectus tempor, vulputate nisl vel, tempus lectus. Fusce sed lacus porttitor diam sollicitudin vehicula et vitae est. Donec euismod metus elit, vel elementum orci gravida sed. Aliquam eu arcu velit. Duis urna massa, dignissim dictum ultrices vel, molestie id lectus. Donec condimentum sit amet erat a ultricies. In scelerisque neque in congue laoreet. Nulla ut ultricies leo, vel mollis orci. Nam mollis erat at porttitor varius. Sed eget ligula vulputate odio dapibus faucibus sed et nisi. Nunc vel pulvinar massa, id hendrerit arcu. Aliquam eu cursus arcu"/>
-          </TextFlow>
-        </HBox>
-
-        <!-- Mensagem enviada - longa -->
-        <HBox styleClass="message-card-right-container">
-          <TextFlow styleClass="message-card, sent-message">
-            <Text text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pharetra tempus nunc ut pharetra. Sed ornare, ante sit amet congue feugiat, ante lorem efficitur tellus, ornare posuere augue justo et turpis. Quisque accumsan pellentesque dictum. Aliquam et lectus tempor, vulputate nisl vel, tempus lectus. Fusce sed lacus porttitor diam sollicitudin vehicula et vitae est. Donec euismod metus elit, vel elementum orci gravida sed. Aliquam eu arcu velit. Duis urna massa, dignissim dictum ultrices vel, molestie id lectus. Donec condimentum sit amet erat a ultricies. In scelerisque neque in congue laoreet. Nulla ut ultricies leo, vel mollis orci. Nam mollis erat at porttitor varius. Sed eget ligula vulputate odio dapibus faucibus sed et nisi. Nunc vel pulvinar massa, id hendrerit arcu. Aliquam eu cursus arcu"/>
-          </TextFlow>
-        </HBox>
       </VBox>
     </ScrollPane>
     <HBox styleClass="input-field-container"
@@ -364,7 +91,8 @@
                 left="10.0"
                 right="10.0"/>
       </VBox.margin>
-      <TextField focusTraversable="false"
+      <TextField fx:id="messageInput"
+                 focusTraversable="false"
                  promptText="Digite uma mensagem"
                  styleClass="text-field"
                  HBox.hgrow="ALWAYS"
@@ -374,7 +102,8 @@
                 size="12.0"/>
         </font>
       </TextField>
-      <Button alignment="CENTER"
+      <Button fx:id="sendButton"
+              alignment="CENTER"
               contentDisplay="CENTER"
               styleClass="send-button"
               textAlignment="CENTER"

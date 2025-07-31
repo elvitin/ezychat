@@ -3,9 +3,9 @@
   -fx-border-color: #E5E5E5;
   -fx-border-width: 0 1px 0 0;
   -fx-min-width: 565px;
-  -fx-pannable: "true";
-  -fx-vbar-policy: "ALWAYS";
-  -fx-hbar-policy: "NEVER";
+  -fx-pannable: false;
+  -fx-vbar-policy: always;
+  -fx-hbar-policy: never;
   -fx-fit-to-width: true;
   -fx-background-insets: 0;
 }
@@ -18,47 +18,6 @@
   -fx-background-color: #fff;
   -fx-padding: 10;
   -fx-spacing: 4;
-}
-
-.scroll-pane .profile-card {
-  -fx-background-color: #fff;
-  -fx-background-radius: 16;
-  -fx-border-color: transparent;
-  -fx-border-width: 0;
-  -fx-padding: 14;
-  -fx-alignment: center_left;
-  -fx-spacing: 14;
-}
-
-.scroll-pane .profile-card:hover {
-  -fx-background-color: #F6F5F4;
-}
-
-.scroll-pane .profile-card .profile-picture {
-  -fx-fill: "DODGERBLUE";
-  -fx-stroke-width: 0;
-}
-
-.scroll-pane .profile-card .profile-content {
-  -fx-alignment: center-left;
-}
-
-.scroll-pane .profile-card .profile-content .profile-username {
-  -fx-fill: #0a0a0a;
-  -fx-font-smoothing-type: lcd;
-  -fx-stroke-width: 0;
-  -fx-text-alignment: left;
-  -fx-font-family: "Segoe UI";
-  -fx-font-size: 16;
-}
-
-.scroll-pane .profile-card .profile-content .spoiler-content {
-  -fx-fill: #00000099;
-  -fx-font-smoothing-type: lcd;
-  -fx-stroke-width: 0;
-  -fx-text-alignment: left;
-  -fx-font-family: "Segoe UI";
-  -fx-font-size: 13;
 }
 
 .scroll-pane > .scroll-bar:vertical { /* `track` is a background of `thumb` */
@@ -158,48 +117,8 @@
   -fx-fill: #fff;
 }
 
-
 #messagesContainer {
   -fx-background-color: transparent;
   -fx-padding: 18 62; /* ok */
   -fx-spacing: 12; /* ok */
-}
-
-.message-card-left-container {
-  -fx-alignment: center_left;
-}
-
-.message-card-right-container {
-  -fx-alignment: center_right;
-  -fx-padding: 0 0 0 16; /* ok */
-}
-
-
-.message-card {
-  -fx-background-radius: 12;
-  -fx-padding: 8px 10px;
-  -fx-max-width: 754px;
-  -fx-wrap-text: true;
-  /*-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 10, 0, 0)*/
-  /* add only bottom border */
-  -fx-border-width: 0 0 1px 0;
-  -fx-border-color: rgba(0, 0, 0, 0.2);
-  -fx-border-radius: 0 0 10 10;
-}
-
-.received-message {
-  -fx-background-radius: 0 12 12;
-  -fx-background-color: #fff;
-}
-
-.sent-message {
-  -fx-background-radius: 12 0 12 12;
-  -fx-background-color: #D9FDD3;
-}
-
-.message-card Text {
-  -fx-font-family: "Segoe UI";
-  -fx-font-size: 14px;
-  -fx-fill: #0a0a0a;
-  -fx-font-smoothing-type: lcd;
 }
