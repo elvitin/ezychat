@@ -1,0 +1,13 @@
+edition = "2023";
+
+package builds.java;
+
+option java_multiple_files = true;
+option java_package = "com.vtaveira.builds.java";
+
+message MessageRestored {
+  uint64 id = 1;
+  string content = 2;
+  string createdAt = 3;
+  bool fromMe = 4;
+}

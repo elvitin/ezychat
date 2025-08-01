@@ -1,0 +1,13 @@
+edition = "2023";
+
+package builds.java;
+
+option java_multiple_files = true;
+option java_package = "com.vtaveira.builds.java";
+
+message ChatMessage {
+  uint64 id = 1;
+  string username = 2;
+  string content = 3;
+  string createdAt = 4;
+}

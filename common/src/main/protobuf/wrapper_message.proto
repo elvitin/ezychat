@@ -5,53 +5,24 @@ package builds.java;
 option java_multiple_files = true;
 option java_package = "com.vtaveira.builds.java";
 
-message LoginRequest {
-  string username = 1;
-  string password = 2;
-}
-
-message LoginResponse {
-  bool success = 1;
-  string status = 2;
-  string errorMessage = 3;
-  repeated string pendingMessages = 4;
-}
-
-message PrivateMessage {
-  string recipientUsername = 1;
-  string messageContent = 2;
-}
-
-message GroupMessage {
-  string groupId = 1;
-  string messageContent = 2;
-}
-
-message UserStatusUpdate {
-  string username = 1;
-  string status = 2;
-}
-
-message RegisterRequest {
-  string username = 1;
-  string fullName = 2;
-  string email = 3;
-  string password = 4;
-}
-
-message Ack {
-  bool sucess = 1;
-  string message = 2;
-}
+import "login_request.proto";
+import "login_response.proto";
+import "private_message_request.proto";
+import "register_request.proto";
+import "register_response.proto";
+import "user_status_update.proto";
+import "private_message_response.proto";
+import "chat_message.proto";
 
 message WrapperMessage {
   oneof payload {
     LoginRequest loginRequest = 1;
     LoginResponse loginResponse = 2;
-    PrivateMessage privateMessage = 3;
-    GroupMessage groupMessage = 4;
+    PrivateMessageRequest privateMessageRequest = 3;
+    PrivateMessageResponse privateMessageResponse = 4;
     RegisterRequest registerRequest = 5;
-    UserStatusUpdate userStatusUpdate = 6;
-    Ack ack = 7;
+    RegisterResponse registerResponse = 6;
+    UserStatusUpdate userStatusUpdate = 7;
+    ChatMessage chatMessage = 8;
   }
 }

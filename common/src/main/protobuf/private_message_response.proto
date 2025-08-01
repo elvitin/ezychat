@@ -1,0 +1,11 @@
+edition = "2023";
+
+package builds.java;
+
+option java_multiple_files = true;
+option java_package = "com.vtaveira.builds.java";
+
+message PrivateMessageResponse {
+  bool success = 1;
+  uint64 id = 2;
+}
