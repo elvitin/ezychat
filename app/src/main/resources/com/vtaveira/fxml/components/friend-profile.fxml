@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<fx:root xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         type="HBox"
+         stylesheets="@friend-profile.css"
+         styleClass="friend_profile__profile_header"
+>
+  <Circle styleClass="friend_profile__profile_picture"
+          radius="20.0"
+  />
+  <VBox styleClass="friend_profile__profile_content">
+    <Text fx:id="username"
+          text="&lt;N/A&gt;"
+          styleClass="friend_profile__profile_username"
+    />
+    <Text fx:id="statusContent"
+          styleClass="friend_profile__status_content"
+          text="&lt;N/A&gt;"
+    />
+  </VBox>
+</fx:root>

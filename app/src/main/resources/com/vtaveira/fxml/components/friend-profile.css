@@ -1,0 +1,35 @@
+.friend_profile__profile_header {
+  -fx-background-color: fff;
+  -fx-border-width: 0 0 1px 0;
+  -fx-border-color: #e5e5e5;
+  -fx-alignment: center_left;
+  -fx-spacing: 12;
+  -fx-padding: 12 0 12 12;
+}
+
+.friend_profile__profile_picture {
+  -fx-fill: "DODGERBLUE";
+  -fx-stroke-width: 0;
+}
+
+.friend_profile__profile_content {
+  -fx-alignment: center-left;
+}
+
+.friend_profile__profile_username {
+  -fx-fill: #0a0a0a;
+  -fx-font-smoothing-type: lcd;
+  -fx-stroke-width: 0;
+  -fx-text-alignment: left;
+  -fx-font-family: "Segoe UI";
+  -fx-font-size: 16;
+}
+
+.friend_profile__status_content {
+  -fx-fill: #00000099;
+  -fx-font-smoothing-type: lcd;
+  -fx-stroke-width: 0;
+  -fx-text-alignment: left;
+  -fx-font-family: "Segoe UI";
+  -fx-font-size: 13;
+}
