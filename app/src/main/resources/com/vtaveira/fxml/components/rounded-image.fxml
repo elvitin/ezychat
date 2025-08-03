@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+
+<?import javafx.scene.shape.Circle?>
+<fx:root xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         type="ImageView"
+         preserveRatio="true"
+>
+  <clip>
+    <Circle fx:id="roundedMask"/>
+  </clip>
+</fx:root>
