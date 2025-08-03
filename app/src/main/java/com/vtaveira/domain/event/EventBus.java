@@ -23,7 +23,7 @@ public class EventBus {
   }
 
   public <T> void subscribe(Class<T> eventType, Consumer<T> listener) {
-    log.info("subscribing to event type: [{}]", eventType.getCanonicalName());
+    log.info("subscribing to event type: [{}]", eventType.getSimpleName());
     listeners.computeIfAbsent(eventType, _ -> new CopyOnWriteArrayList<>())
         .add(listener);
   }
@@ -35,17 +35,17 @@ public class EventBus {
       if (eventListeners.isEmpty()) {
         this.listeners.remove(eventType);
       }
-      log.info("unsubscribing from event type: [{}]", eventType.getCanonicalName());
+      log.info("unsubscribing from event type: [{}]", eventType.getSimpleName());
     }
   }
 
   public <T> void publish(T event) {
-    log.info("publishing event: {}", event.getClass().getCanonicalName());
+    log.info("publishing event [{}]", event.getClass().getSimpleName());
     var eventListeners = this.listeners.get(event.getClass());
     if (eventListeners != null) {
       eventListeners.forEach(listener -> executor.submit(() -> {
         try {
-          log.info("invoking event listener: [{}]", listener.getClass().getCanonicalName());
+          log.info("invoking event listener: [{}]", listener.getClass().getSimpleName());
           @SuppressWarnings("unchecked")
           var typedListener = (Consumer<T>) listener;
           typedListener.accept(event);
