@@ -10,7 +10,7 @@ import java.sql.SQLException;
 @UtilityClass
 public class UserRepositoryFactory {
 
-  public  UserRepository getInstance() throws SQLException {
+  public UserRepository getInstance() throws SQLException {
     return new RelationalUserRepository(DatabaseConfig.getConnectionSource());
   }
 }
