@@ -2,17 +2,17 @@
 
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Text?>
-<fx:root xmlns:fx="http://javafx.com/fxml"
-         xmlns="http://javafx.com/javafx"
+<?import com.vtaveira.ui.components.RoundedImage?>
+
+<fx:root xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
          type="HBox"
          stylesheets="@friend-profile.css"
          styleClass="friend_profile__profile_header"
 >
-  <Circle styleClass="friend_profile__profile_picture"
-          radius="20.0"
-  />
+  <RoundedImage size="40"
+                fx:id="roundedImage"/>
   <VBox styleClass="friend_profile__profile_content">
     <Text fx:id="username"
           text="&lt;N/A&gt;"

@@ -1,10 +1,13 @@
 package com.vtaveira.ui.components;
 
 import com.vtaveira.ui.util.FXMLLoaderUtil;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import lombok.extern.slf4j.Slf4j;
@@ -17,9 +20,11 @@ public class FriendProfile extends HBox implements Initializable {
 
   private final StringProperty usernameProperty = new SimpleStringProperty(this, "username", "<N/A>");
   private final StringProperty statusContentProperty = new SimpleStringProperty(this, "statusContent", "<N/A>");
+  private final ObjectProperty<Image> profilePictureProperty = new SimpleObjectProperty<>(this, "profilePicture");
 
   @FXML Text username;
   @FXML Text statusContent;
+  @FXML RoundedImage roundedImage;
 
   public FriendProfile() {
     super();
@@ -64,6 +69,14 @@ public class FriendProfile extends HBox implements Initializable {
 
   public void setStatusContent(String statusContent) {
     this.statusContentProperty.set(statusContent);
+  }
+
+  public Image getProfilePicture() {
+    return this.profilePictureProperty.get();
+  }
+
+  public void setProfilePicture(Image image) {
+    this.profilePictureProperty.set(image);
   }
 
   @Override

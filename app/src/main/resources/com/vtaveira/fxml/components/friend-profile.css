@@ -1,5 +1,5 @@
 .friend_profile__profile_header {
-  -fx-background-color: fff;
+  -fx-background-color: #fff;
   -fx-border-width: 0 0 1px 0;
   -fx-border-color: #e5e5e5;
   -fx-alignment: center_left;
@@ -7,10 +7,6 @@
   -fx-padding: 12 0 12 12;
 }
 
-.friend_profile__profile_picture {
-  -fx-fill: "DODGERBLUE";
-  -fx-stroke-width: 0;
-}
 
 .friend_profile__profile_content {
   -fx-alignment: center-left;
