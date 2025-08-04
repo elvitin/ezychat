@@ -7,12 +7,15 @@ import com.j256.ormlite.support.ConnectionSource;
 import com.vtaveira.domain.model.Message;
 import com.vtaveira.domain.model.MessageStatus;
 import com.vtaveira.domain.repository.MessageRepository;
+import com.vtaveira.domain.repository.dto.SavedMessage;
 import com.vtaveira.infra.persistence.entity.MessageEntity;
 import com.vtaveira.infra.persistence.mapper.MessageMapper;
 import lombok.extern.slf4j.Slf4j;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 public class RelationalMessageRepository implements MessageRepository {
@@ -39,6 +42,20 @@ public class RelationalMessageRepository implements MessageRepository {
     } catch (SQLException e) {
       log.error("error retrieving unread messages for user: {}", username, e);
       return List.of();
+    }
+  }
+
+  @Override
+  public Optional<SavedMessage> upsert(Message message) {
+    try {
+      MessageEntity messageEntity = MessageMapper.toEntity(message);
+      messageEntity.setCreatedAt(new Date());
+      this.messageDao.createOrUpdate(messageEntity);
+      log.info("message saved from {} to {}: {}", message.getSender().getUsername(), message.getReceiver().getUsername(), message.getContent());
+      return Optional.of(new SavedMessage(messageEntity.getId(), messageEntity.getCreatedAt()));
+    } catch (SQLException e) {
+      log.error("failed to save message from {} to {}: {}", message.getSender().getUsername(), message.getReceiver().getUsername(), e.getMessage(), e);
+      return Optional.empty();
     }
   }
 }
