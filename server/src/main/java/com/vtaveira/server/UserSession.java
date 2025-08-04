@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 public class UserSession {
-  private UserStatus status = UserStatus.OFFLINE;
   private String username;
   private String ipAddress;
+  private UserStatus status = UserStatus.OFFLINE;
 }
