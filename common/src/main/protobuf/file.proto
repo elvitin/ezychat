@@ -1,0 +1,12 @@
+edition = "2023";
+
+package builds.java;
+
+option java_multiple_files = true;
+option java_package = "com.vtaveira.builds.java";
+
+message File {
+  string filename = 1;
+  bytes data = 2;
+  string contentType = 3;
+}
