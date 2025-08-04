@@ -25,15 +25,15 @@ public class MessageEntity {
   @DatabaseField(canBeNull = false)
   private String content;
 
-  @DatabaseField(foreign = true, canBeNull = false, readOnly = true, columnName = SENDER_FIELD)
+  @DatabaseField(foreign = true, canBeNull = false, columnName = SENDER_FIELD, foreignAutoRefresh = true)
   private UserEntity sender;
 
-  @DatabaseField(foreign = true, canBeNull = false, readOnly = true, columnName = RECEIVER_FIELD)
+  @DatabaseField(foreign = true, canBeNull = false, columnName = RECEIVER_FIELD, foreignAutoRefresh = true)
   private UserEntity receiver;
 
   @DatabaseField(canBeNull = false)
   private MessageStatus status;
 
-  @DatabaseField(canBeNull = false, readOnly = true, columnDefinition = "CURRENT_TIMESTAMP")
+  @DatabaseField(canBeNull = false)
   private Date createdAt;
 }

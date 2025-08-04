@@ -18,6 +18,7 @@ public class MessageMapper {
 
   public Message toDomain(MessageEntity entity) {
     var message = new Message();
+    message.setId(entity.getId());
     message.setContent(entity.getContent());
     message.setSender(UserMapper.toDomain(entity.getSender()));
     message.setReceiver(UserMapper.toDomain(entity.getReceiver()));
@@ -32,7 +33,6 @@ public class MessageMapper {
     entity.setSender(UserMapper.toEntity(message.getSender()));
     entity.setReceiver(UserMapper.toEntity(message.getReceiver()));
     entity.setStatus(message.getStatus());
-    entity.setCreatedAt(message.getCreatedAt());
     return entity;
   }
 }
