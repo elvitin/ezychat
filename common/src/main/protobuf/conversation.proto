@@ -6,8 +6,11 @@ option java_multiple_files = true;
 option java_package = "com.vtaveira.builds.java";
 
 import "message_restored.proto";
+import "file.proto";
 
 message Conversation {
   string toUsername = 1;
-  repeated MessageRestored messages = 2;
+  string friendFullName = 2;
+  File file = 3;
+  repeated MessageRestored messages = 4;
 }
