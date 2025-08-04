@@ -2,23 +2,21 @@ package com.vtaveira.infra.persistence.mapper;
 
 import com.vtaveira.domain.model.Message;
 import com.vtaveira.infra.persistence.entity.MessageEntity;
+import lombok.experimental.UtilityClass;
 
 import java.util.List;
 
 
+@UtilityClass
 public class MessageMapper {
 
-  private MessageMapper() {
-    throw new IllegalStateException("Utility class");
-  }
-
-  public static List<Message> toDomainList(List<MessageEntity> entities) {
+  public List<Message> toDomainList(List<MessageEntity> entities) {
     return entities.stream()
         .map(MessageMapper::toDomain)
         .toList();
   }
 
-  public static Message toDomain(MessageEntity entity) {
+  public Message toDomain(MessageEntity entity) {
     var message = new Message();
     message.setContent(entity.getContent());
     message.setSender(UserMapper.toDomain(entity.getSender()));
@@ -28,7 +26,7 @@ public class MessageMapper {
     return message;
   }
 
-  public static MessageEntity toEntity(Message message) {
+  public MessageEntity toEntity(Message message) {
     var entity = new MessageEntity();
     entity.setContent(message.getContent());
     entity.setSender(UserMapper.toEntity(message.getSender()));

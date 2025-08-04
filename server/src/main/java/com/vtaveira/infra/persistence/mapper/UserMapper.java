@@ -2,12 +2,10 @@ package com.vtaveira.infra.persistence.mapper;
 
 import com.vtaveira.domain.model.User;
 import com.vtaveira.infra.persistence.entity.UserEntity;
+import lombok.experimental.UtilityClass;
 
+@UtilityClass
 public class UserMapper {
-
-  private UserMapper() {
-    throw new IllegalStateException("Utility class");
-  }
 
   public static UserEntity toEntity(User user) {
     var entity = new UserEntity();
