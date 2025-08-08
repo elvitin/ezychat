@@ -16,14 +16,19 @@ import java.sql.SQLException;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Slf4j
 public class RelationalMessageRepository implements MessageRepository {
 
   private final Dao<MessageEntity, Long> messageDao;
 
-  public RelationalMessageRepository(ConnectionSource connectionSource) throws SQLException {
-    this.messageDao = DaoManager.createDao(connectionSource, MessageEntity.class);
+  public RelationalMessageRepository(ConnectionSource connectionSource)  {
+    try {
+      this.messageDao = DaoManager.createDao(connectionSource, MessageEntity.class);
+    } catch (SQLException e) {
+      throw new IllegalArgumentException(e);
+    }
   }
 
   @Override
@@ -57,5 +62,10 @@ public class RelationalMessageRepository implements MessageRepository {
       log.error("failed to save message from {} to {}: {}", message.getSender().getUsername(), message.getReceiver().getUsername(), e.getMessage(), e);
       return Optional.empty();
     }
+  }
+
+  @Override
+  public Set<String> getOpenChatUsernames(String username) {
+    return Set.of();
   }
 }

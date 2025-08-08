@@ -18,8 +18,12 @@ public class RelationalUserRepository implements UserRepository {
 
   private final Dao<UserEntity, Long> userDao;
 
-  public RelationalUserRepository(ConnectionSource connectionSource) throws SQLException {
-    this.userDao = DaoManager.createDao(connectionSource, UserEntity.class);
+  public RelationalUserRepository(ConnectionSource connectionSource) {
+    try {
+      this.userDao = DaoManager.createDao(connectionSource, UserEntity.class);
+    } catch (SQLException e) {
+      throw new IllegalArgumentException(e);
+    }
   }
 
   public void save(User user) {

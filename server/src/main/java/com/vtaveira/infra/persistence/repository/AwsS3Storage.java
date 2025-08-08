@@ -58,7 +58,7 @@ public class AwsS3Storage implements FileStorage {
       var response = result.response();
       var contentType = response.contentType();
       var map = response.metadata();
-      byte[] fileContent = result.asByteArray();
+      var fileContent = result.asByteArray();
       return Optional.of(new StoredFile(fileContent, contentType, map.get("ext")));
     } catch (NoSuchKeyException _) {
       return Optional.empty();
