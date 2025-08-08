@@ -6,7 +6,7 @@ import java.net.Socket;
 
 @UtilityClass
 public class Utils {
-  public static String getClientIPPort(Socket socket) {
+  public String getClientIPPort(Socket socket) {
     return socket.getInetAddress() + ":" + socket.getPort();
   }
 }
